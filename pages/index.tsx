@@ -48,7 +48,6 @@ export default function Home() {
       })
     }).then(
       (res)=>{
-        console.log(res.status);
         if(res.status === 404)
           setDomainNotFound(true);  
         if(res.status === 200)

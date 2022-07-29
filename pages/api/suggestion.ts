@@ -24,7 +24,6 @@ export default function handler(
     res: NextApiResponse<{suggestion: string}|{error: string}>
 ) {
     const {name, domain} = req.body as RequestBody;
-    console.log('name:', name, Object.values(req.body));
     validateInputs(res, name, domain)
 
     if (domainToEmailFomatMap.has(domain)) {
